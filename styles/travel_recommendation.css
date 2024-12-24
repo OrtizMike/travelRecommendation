@@ -1,4 +1,4 @@
-@import url('/styles/fonts.css');
+@import url('fonts.css');
 
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ html, body {
 
 body {
     background-color: #000;
-    background-image: url("/img/san-francisco.jpg");
+    background-image: url("../img/san-francisco.jpg");
     background-size: cover;
     min-height: 100vh;
 }

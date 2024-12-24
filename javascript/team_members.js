@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest();
 
-var url = './team_members_api.json';
+var url = '../team_members_api.json';
 
 xhr.open('GET', url, true);
 xhr.responseType = 'json';

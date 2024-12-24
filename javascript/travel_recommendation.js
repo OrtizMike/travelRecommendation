@@ -6,7 +6,7 @@ btnSearch.addEventListener("click", searchRecommendation);
 btnReset.addEventListener("click", resetRecomendations);
 
 
-const apiUrl = "/travel_recommendation_api.json"
+const apiUrl = "../travel_recommendation_api.json"
 
 function searchRecommendation(event) {
   const searchInput = document.getElementById("searchInput")
@@ -33,7 +33,7 @@ function searchRecommendation(event) {
         const destinationPhotoContainer = document.createElement('div')
         destinationPhotoContainer.classList.add('destination-photo');
         const destinationPhoto = document.createElement('img')
-        destinationPhoto.src = `/img/${destination.imageUrl}`
+        destinationPhoto.src = `../img/${destination.imageUrl}`
         const destinationInfo = document.createElement('div')
         destinationInfo.classList.add('destination-info');
         const destinationName = document.createElement('span')
