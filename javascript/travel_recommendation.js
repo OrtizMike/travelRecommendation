@@ -33,7 +33,7 @@ function searchRecommendation(event) {
         const destinationPhotoContainer = document.createElement('div')
         destinationPhotoContainer.classList.add('destination-photo');
         const destinationPhoto = document.createElement('img')
-        destinationPhoto.src = `../img/${destination.imageUrl}`
+        destinationPhoto.src = `./img/${destination.imageUrl}`
         const destinationInfo = document.createElement('div')
         destinationInfo.classList.add('destination-info');
         const destinationName = document.createElement('span')

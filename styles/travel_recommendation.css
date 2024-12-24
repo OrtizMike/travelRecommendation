@@ -190,6 +190,8 @@ aside a:hover{
     border-radius: 10px;
     color: #000;
     height: 450px;
+    margin-bottom: 20px;
+    overflow: hidden;
     width: 80%;
 }
 
