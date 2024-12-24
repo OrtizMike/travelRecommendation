@@ -1,0 +1,61 @@
+.contact-content {
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+    height: calc(100vh - 64px);
+    padding: 0 5%;
+}
+
+.contact-content article{
+    height: 100%;
+    width: 40%;
+}
+
+.contact-content article {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#contact-form {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-field-group label {
+    margin-bottom: 10px;
+}
+
+.form-field-group input:not([type="submit"]) {
+    height: 30px;
+}
+.form-field-group input:not([type="submit"]),
+#message {
+    background: transparent;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+}
+
+#message {
+}
+
+#btnSubmitform {
+    background-color: #008080;
+    cursor: pointer;
+    color:#FFF;
+    padding: 10px;
+    width: 100%;
+}
+
+#btnSubmitform:hover {
+    background-color: #037070;
+}
+

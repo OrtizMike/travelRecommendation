@@ -1,0 +1,61 @@
+.about-us-content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: calc(100vh - 64px);
+    padding: 0 5%;
+}
+
+.about-us-description {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.our-team {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 5% 1fr 3fr;
+    column-gap: 20px;
+}
+
+.js-team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.team-member-photo {
+    font-size: 5rem;
+}
+
+.team-member-name {
+    font-weight: 600;
+}
+
+.team-member-description {
+    color: lightgray;
+}
+
+.team-member-position {
+    background-color: #037070;
+    border-radius: 10px;
+    border: 1px solid rgba(245, 245, 247, .8);
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+}
+
+.about-us-content h1 {
+    width: 80%;
+}

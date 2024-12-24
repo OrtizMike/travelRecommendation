@@ -1,0 +1,23 @@
+{
+    "members": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "description": "John is responsible for...",
+        "position": "CEO"
+      },
+      {
+        "id": 1,
+        "name": "Celina Thomas",
+        "description": "Celina Thomas is responsible for...",
+        "position": "Team Lead"
+      },
+      {
+        "id": 1,
+        "name": "Mike Tysen",
+        "description": "Mike Tysen is responsible for...",
+        "position": "Delivery Head"
+      }
+    ]
+  }
+
