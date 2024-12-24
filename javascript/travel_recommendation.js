@@ -16,7 +16,7 @@ function searchRecommendation(event) {
     return
   }
 
-  fetch(apiUrl)
+  fetch('travel_recommendation_api.json')
     .then(response => response.json())
     .then(result => {
       recommendationContainer.innerHTML = ""
