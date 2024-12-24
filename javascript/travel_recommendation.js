@@ -6,7 +6,7 @@ btnSearch.addEventListener("click", searchRecommendation);
 btnReset.addEventListener("click", resetRecomendations);
 
 
-const apiUrl = "../travel_recommendation_api.json"
+const apiUrl = "travel_recommendation_api.json"
 
 function searchRecommendation(event) {
   const searchInput = document.getElementById("searchInput")
