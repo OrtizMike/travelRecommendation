@@ -20,47 +20,44 @@ function searchRecommendation(event) {
     .then(response => response.json())
     .then(result => {
       recommendationContainer.innerHTML = ""
-      let data
+      // let data
+
+      const buildRecomendations = data => {
+        data.forEach(destination => {
+          const destinationContainer = document.createElement('div')
+          destinationContainer.classList.add('destination-card');
+          const destinationPhotoContainer = document.createElement('div')
+          destinationPhotoContainer.classList.add('destination-photo');
+          const destinationPhoto = document.createElement('img')
+          destinationPhoto.src = `./img/${destination.imageUrl}`
+          const destinationInfo = document.createElement('div')
+          destinationInfo.classList.add('destination-info');
+          const destinationName = document.createElement('span')
+          destinationName.classList.add('destination-name');
+          destinationName.textContent = destination.name
+          const destinationDescription = document.createElement('span')
+          destinationDescription.classList.add('destination-description');
+          destinationDescription.textContent = destination.description
+          const destinationVisit = document.createElement('input')
+          destinationVisit.type = "button"
+          destinationVisit.value = "Visit"
+          destinationVisit.classList.add('btn')
+          destinationVisit.classList.add('destination-visit')
 
 
-      if( searchKeyword.includes("beach")) data = result.beaches
-      if( searchKeyword.includes("temple")) data = result.temples
-      if( searchKeyword.includes("countries") || searchKeyword.includes("country")) data = result.countries[Math.floor(Math.random() * 3)].cities
+          destinationPhotoContainer.appendChild(destinationPhoto)
+          destinationInfo.appendChild(destinationName)
+          destinationInfo.appendChild(destinationDescription)
+          destinationInfo.appendChild(destinationVisit)
+          destinationContainer.appendChild(destinationPhotoContainer)
+          destinationContainer.appendChild(destinationInfo)
+          recommendationContainer.appendChild(destinationContainer)
+        })
+      }
 
-      data.forEach(destination => {
-        const destinationContainer = document.createElement('div')
-        destinationContainer.classList.add('destination-card');
-        const destinationPhotoContainer = document.createElement('div')
-        destinationPhotoContainer.classList.add('destination-photo');
-        const destinationPhoto = document.createElement('img')
-        destinationPhoto.src = `./img/${destination.imageUrl}`
-        const destinationInfo = document.createElement('div')
-        destinationInfo.classList.add('destination-info');
-        const destinationName = document.createElement('span')
-        destinationName.classList.add('destination-name');
-        destinationName.textContent = destination.name
-        const destinationDescription = document.createElement('span')
-        destinationDescription.classList.add('destination-description');
-        destinationDescription.textContent = destination.description
-        const destinationVisit = document.createElement('input')
-        destinationVisit.type = "button"
-        destinationVisit.value = "Visit"
-        destinationVisit.classList.add('btn')
-        destinationVisit.classList.add('destination-visit')
-
-
-        destinationPhotoContainer.appendChild(destinationPhoto)
-        destinationInfo.appendChild(destinationName)
-        destinationInfo.appendChild(destinationDescription)
-        destinationInfo.appendChild(destinationVisit)
-        destinationContainer.appendChild(destinationPhotoContainer)
-        destinationContainer.appendChild(destinationInfo)
-        recommendationContainer.appendChild(destinationContainer)
-      })
-
-      // Countries
-
-
+      if( searchKeyword.includes("beach")) buildRecomendations(result.beaches)
+      if( searchKeyword.includes("temple")) buildRecomendations(result.temples)
+      if( searchKeyword.includes("countries") || searchKeyword.includes("country")) result.countries.forEach(country => buildRecomendations(country.cities) )
     })
     .catch(error => {
       console.log('Error:', error);
